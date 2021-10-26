@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-music_app-music_appUITests/Pods-music_app-music_appUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SPAlert/SPAlert.framework

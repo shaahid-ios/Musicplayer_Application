@@ -1,0 +1,22 @@
+PODS:
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+  - SPAlert (3.4.1)
+
+DEPENDENCIES:
+  - SDWebImage (~> 5.0)
+  - SPAlert
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SPAlert
+
+SPEC CHECKSUMS:
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  SPAlert: 5738ac9368870ada154af03ce70d0542b80c676e
+
+PODFILE CHECKSUM: 19c1f36035a06b3eb4d6e3e1305e7e578c4f9879
+
+COCOAPODS: 1.11.2
