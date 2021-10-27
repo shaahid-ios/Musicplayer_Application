@@ -269,19 +269,16 @@
                 if position <= (songs.count) {
                     position += 1
                  configure()
+                 karokeconfigure()
+                  
 
                 }
-
-              
                    }else if isrepeat == true{
                     
                         player?.seek(to: CMTime.zero)
                         player?.play()
-    
                    }
-            
-            if isMix == false{
-
+                if isMix == false{
                 player?.seek(to: CMTime.zero)
                 player?.play()
                    }else if isMix == true{
@@ -289,17 +286,18 @@
                     if position <= (songs.count) {
                       position = position + 2
                      configure()
+                    karokeconfigure()
       
                       }
                      }
+        
 //            if position <= (songs.count) {
 //              position = position + 1
 //             configure()
 //
 //                }
-            
-        
-        }
+
+                }
         
         func stringFromTimeInterval(interval: TimeInterval) -> String {
         let interval = Int(interval)
@@ -407,6 +405,8 @@
 
               nextButton.addTarget(self, action: #selector(kdidTapNextButton), for: .touchUpInside)
               backButton.addTarget(self, action: #selector(kdidTapBackButton), for: .touchUpInside)
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(self.finishedPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
 
             playButton.setImage(UIImage(named: "pause"), for: .normal)
             slide.minimumValue = 0
@@ -438,6 +438,11 @@
                    // self.loadingView.isHidden = true
                 }
         }
+            
+            if ((position + 1) == songs.count){
+                  position = 0
+             }
+            
         }
 
         @objc func didTapBackButton() {
